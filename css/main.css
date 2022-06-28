@@ -1,0 +1,105 @@
+
+html,
+body {
+  font-family: 'comfortaa', sans-serif;
+  text-align: right;
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav bar */
+
+ nav ul {
+  position: fixed;
+  text-align: right;
+  width: 100%;
+  background-color: #Fff;
+  background: rgba(255,255,255,0.9);
+  font-family: "comfortaa",sans-serif; 
+  font-size: 1.2em;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 30px; 
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #ababab;
+}
+
+/* about me */
+
+#welcome-section {
+  top: 20;
+  line-height: 1.6;
+  background: #F5F5F5;
+  min-height: 55vh;
+  padding-top: 45vh;
+  text-align:
+}
+  
+
+/* Callback */
+
+#Callback {
+  top: 5;
+  width: 50%;
+  line-height: 1.6;
+  background: #F5F5F5;
+  min-height: 55vh;
+  padding-top: 10vh;
+  text-align: 
+}
+
+#VideoConf {
+  top: 5;
+  width: 50%;
+  line-height: 1.6;
+  background: #F5F5F5;
+  min-height: 100vh;
+  padding-top: 10vh;
+  text-align: 
+}
+
+/* Co Browse */
+
+body.replica,
+body.replica.status-ready {
+    background-color: #EAEAEA;
+}
+
+body.replica.status-primary-disconnected {
+    background-color: #f0ad4e;
+}
+
+body.replica.status-disconnected {
+    background-color: #d9534f;
+}
+
+body.replica .close {
+    border: 1px solid black;
+    color: black;
+}
+
+body.replica .replica-title {
+    color: black;
+}
+
+body.popup .window {
+    border: solid 3px #134C75;
+}
+
+body.popup .window-header {
+    background-color: #e87415;
+}
+
+
