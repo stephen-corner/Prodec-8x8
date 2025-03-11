@@ -33,6 +33,7 @@
         buttonContainerId: "__8x8-chat-button-container-script_206052544262b594283c1531.50846525",
         align: "right"
     };
+</script>
 
     (function() {
         var se = document.createElement("script");
