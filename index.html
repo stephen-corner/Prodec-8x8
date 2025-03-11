@@ -9,7 +9,9 @@
     <nav>
       <ul id="navbar">
         <li><div id="__8x8-chat-button-container-script_185861383967c06c8a184151.95238235"></div></li>
-       
+        <li><a href="#" onclick="window.coBrowsingInstance && coBrowsingInstance.showPopup();return false;"><img src="screen share (2).gif"><p style="text-align:center">Help!</p></a></li>
+	<li><a href="https://8x8.vc/8x8/matthew.marchant" target="_blank"><img src="ezgif.com-video-to-gif (1).gif"><p style="text-align:center">Let's Meet</p></a></li>
+	<li style="float:left"><img src=""></a></li>
 			
       </ul>
     </nav>
@@ -17,11 +19,6 @@
 
 <body>
 
- 
-    
-<div id="welcome-section" >
-      
-<img src="NSE Page.PNG">
 <!-- Place this code snippet anywhere you want the button to appear in your page. If no button has been configured in the chat script, it will not show up nor take any space. -->
 <div id="__8x8-chat-button-container-script_185861383967c06c8a184151.95238235"></div>
 
@@ -37,6 +34,24 @@
         buttonContainerId: "__8x8-chat-button-container-script_185861383967c06c8a184151.95238235",
         align: "right"
     };
+
+    (function() {
+        var se = document.createElement("script");
+        se.type = "text/javascript";
+        se.async = true;
+        se.src = window.__8x8Chat.domain + window.__8x8Chat.path + "/CHAT/common/js/chat.js";
+
+        var os = document.getElementsByTagName("script")[0];
+        os.parentNode.insertBefore(se, os);
+    })();
+</script>
+
+
+ 
+    
+<div id="welcome-section" >
+      
+<img src="NSE Page.PNG">
 
     <h1></h1>
     <p></p>
@@ -133,16 +148,42 @@ body {font-family: Arial, Helvetica, sans-serif; font-size: 1.2em;}
 
 
 
-    (function() {
-        var se = document.createElement("script");
-        se.type = "text/javascript";
-        se.async = true;
-        se.src = window.__8x8Chat.domain + window.__8x8Chat.path + "/CHAT/common/js/chat.js";
+<button class="open-button" onclick="openForm()">Request a Callback</button>
 
-        var os = document.getElementsByTagName("script")[0];
-        os.parentNode.insertBefore(se, os);
-    })();
-</script>
+<div class="form-popup" id="myForm">
+  
+  <form name="WebCallBack" action="https://vcc-eu6.8x8.com/SC/webcallback.php" method="get"  oninput="extTransactionData.value = '[Name|' + fname.value +' '+ lname.value + '][Location|' + location.value + '][Reason|' + reason.value +']'">
+<input type="hidden" name="extTransactionData"/>
+<!--  You Need to change these -->
+<input type="hidden" name="tenant" value="prodeccustomernfr01"/>
+<input type="hidden" name="token" value="fc27e080dc7514b897a8514257dc0f7ae4c475a455953882b99101fdd0161218"/>  <!-- from CM -->
+<input type="hidden" name="channel_number" value="441923954520"/>
+<input type="hidden" name="callback_type" value="1"/>    <!-- Immediate -->
+<input type="hidden" name="queue_id" value="175"/>    <!--This must match your Q id from CM -->
+<!--  End Changes change these -->
+<input type="hidden" name="back" value="https://vcc-eu7.8x8.com/"/>
+<input type="hidden" name="expiration" value="1200"/><br/>
+<table>
+<table style="background-color:#FFFFFF;">
+<tr><td>First name:</td><td> <input type="text" name="fname"/></td></tr>
+<tr><td>Last name:</td><td><input type="text" name="lname" /></td></tr>
+<tr><td>Location:</td><td><input type="text" name="location" /></td></tr>
+<tr><td>Reason:</td><td><select name="reason">
+<option value="Sales Enquiry">Sales Enquiry</option>
+<option value="Raise Trouble Ticket">Raise Trouble Ticket</option>
+<option value="Information Request" selected>Information Request</option>
+<option value="Other">Other</option>
+</select></td></tr>
+<tr><td>Phone:</td><td><input type="tel" name="phone" class="anotherClass maskContent" /></td></tr>
+<tr><td colspan="2" style="text-align:center"><input type="submit" value="Call Me"/></td></tr>
+
+</table>
+</form>
+  
+  <form action="/action_page.php" class="form-container">
+
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
   
   
 </div>
