@@ -16,7 +16,9 @@ body {
  nav ul {
   position: fixed;
   text-align: right;
-  width: 100%;
+  width: 245%;
+  Bottom:23px;
+  Right:28px;
   background-color: #Fff;
   background: rgba(255,255,255,0.9);
   font-family: "comfortaa",sans-serif; 
