@@ -95,12 +95,10 @@ body.replica .replica-title {
     color: black;
 }
 
-body.popup .window {
-    border: solid 3px #134C75;
-}
 
-body.popup .window-header {
-    background-color: #e87415;
 }
+</style>
+</head>
+<body>
 
 
