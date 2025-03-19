@@ -57,6 +57,9 @@
     <p></p>
   </div>
 
+<div id="welcome-section2" >
+      
+<img src="Prodec Customer Success.PNG">
 
     <h1></h1>
     <p></p>
@@ -68,17 +71,44 @@
 
 
 <style>
+body {font-family: Arial, Helvetica, sans-serif; font-size: 1.2em;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 245px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  background-color: white;
+}
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 30px;
+  max-width: 300px;
   padding: 10px;
   background-color: white;
 }
 
 /* Full-width input fields */
 .form-container input[type=text], .form-container input[type=password] {
-  width: 10%;
+  width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
@@ -98,17 +128,64 @@
   padding: 16px 20px;
   border: none;
   cursor: pointer;
-  width: 10%;
+  width: 100%;
   margin-bottom:10px;
   opacity: 0.8;
 }
 
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
 
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
 </style>
 </head>
 <body>
 
 
+
+<button class="open-button" onclick="openForm()">Request a Callback</button>
+
+<div class="form-popup" id="myForm">
+  
+  <form name="WebCallBack" action="https://vcc-eu6.8x8.com/SC/webcallback.php" method="get"  oninput="extTransactionData.value = '[Name|' + fname.value +' '+ lname.value + '][Location|' + location.value + '][Reason|' + reason.value +']'">
+<input type="hidden" name="extTransactionData"/>
+<!--  You Need to change these -->
+<input type="hidden" name="tenant" value="prodeccustomernfr01"/>
+<input type="hidden" name="token" value="fc27e080dc7514b897a8514257dc0f7ae4c475a455953882b99101fdd0161218"/>  <!-- from CM -->
+<input type="hidden" name="channel_number" value="441923954520"/>
+<input type="hidden" name="callback_type" value="1"/>    <!-- Immediate -->
+<input type="hidden" name="queue_id" value="175"/>    <!--This must match your Q id from CM -->
+<!--  End Changes change these -->
+<input type="hidden" name="back" value="https://vcc-eu7.8x8.com/"/>
+<input type="hidden" name="expiration" value="1200"/><br/>
+<table>
+<table style="background-color:#FFFFFF;">
+<tr><td>First name:</td><td> <input type="text" name="fname"/></td></tr>
+<tr><td>Last name:</td><td><input type="text" name="lname" /></td></tr>
+<tr><td>Location:</td><td><input type="text" name="location" /></td></tr>
+<tr><td>Reason:</td><td><select name="reason">
+<option value="Sales Enquiry">Sales Enquiry</option>
+<option value="Raise Trouble Ticket">Raise Trouble Ticket</option>
+<option value="Information Request" selected>Information Request</option>
+<option value="Other">Other</option>
+</select></td></tr>
+<tr><td>Phone:</td><td><input type="tel" name="phone" class="anotherClass maskContent" /></td></tr>
+<tr><td colspan="2" style="text-align:center"><input type="submit" value="Call Me"/></td></tr>
+
+</table>
+</form>
+  
+  <form action="/action_page.php" class="form-container">
+
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+  
+  
 </div>
 
 <script>
