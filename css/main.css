@@ -17,7 +17,7 @@ body {
   position: fixed;
   text-align: right;
   Bottom:23px;
-  width: 0%;
+  width: 28%;
   background-color: #Fff;
   background: rgba(255,255,255,0.0);
   font-family: "comfortaa",sans-serif; 
@@ -26,7 +26,7 @@ body {
 
 nav ul li {
   display: inline-block;
-  margin: 10px; 
+  margin: 30px; 
 }
 
 nav ul li a {
@@ -40,12 +40,12 @@ nav ul li a:hover {
 /* about me */
 
 #welcome-section {
-  top: 20;
+  top: 0;
   line-height: 1.6;
   background: #F5F5F5;
   min-height: 55vh;
-  padding-top: 45vh;
-  text-align:
+  padding-top: 0vh;
+  text-align: right:
 }
   
 
