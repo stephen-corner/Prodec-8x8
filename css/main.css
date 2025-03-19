@@ -8,8 +8,8 @@ body {
 }
 
 * {
-  margin: 100;
-  padding: 100;
+  margin: -100;
+  padding: -100;
 }
 
 /* Nav bar */
