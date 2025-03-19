@@ -16,7 +16,7 @@ body {
  nav ul {
   position: fixed;
   text-align: right;
-  width: 20%;
+  width:20%;
   Bottom:23px;
   Right:28px;
   background-color: #Fff;
@@ -27,7 +27,7 @@ body {
 
 nav ul li {
   display: inline-block;
-  margin: 30px; 
+  margin:30px; 
 }
 
 nav ul li a {
