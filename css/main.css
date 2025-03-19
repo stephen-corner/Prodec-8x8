@@ -18,7 +18,7 @@ body {
   text-align: right;
   width:20%;
   Bottom:23px;
-  Right:28px;
+  Right:8px;
   background-color: #Fff;
   background: rgba(255,255,255,0.0);
   font-family: "comfortaa",sans-serif; 
@@ -41,11 +41,11 @@ nav ul li a:hover {
 /* about me */
 
 #welcome-section {
-  top: 20;
+  top: 0;
   line-height: 1.6;
   background: #F5F5F5;
   min-height: 55vh;
-  padding-top: 10vh;
+  padding-top: 0vh;
   text-align:
 }
   
