@@ -17,16 +17,16 @@ body {
   position: fixed;
   text-align: right;
   Bottom:23px;
-  width: 100%;
+  width: 0%;
   background-color: #Fff;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.0);
   font-family: "comfortaa",sans-serif; 
   font-size: 1.2em;
 }
 
 nav ul li {
   display: inline-block;
-  margin: 30px; 
+  margin: 10px; 
 }
 
 nav ul li a {
