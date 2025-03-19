@@ -8,8 +8,8 @@ body {
 }
 
 * {
-  margin: 110;
-  padding: 110;
+  margin: 0;
+  padding: 0;
 }
 
 /* Nav bar */
@@ -27,7 +27,7 @@ body {
 
 nav ul li {
   display: inline-block;
-  margin: 110px; 
+  margin: 30px; 
 }
 
 nav ul li a {
